@@ -1,0 +1,138 @@
+/* * = RESETTING WHOLE HTML DEFAULT PAGE TO ALLOW VIDEO FIT INSIDE OUR BORDER BOX */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif
+}
+
+
+/*          END             */
+
+
+
+/* NAVIGATION BAR */ 
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: transparent;
+
+
+}
+
+.logo { 
+    margin-left: 20px;
+    color: white;
+}
+
+
+.navbar ul li { 
+    display: inline-block;
+    margin: 20px;
+}
+
+.navbar ul li a { 
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+
+}
+
+.navbar ul li a::after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    bottom: -3px;
+    left: 0;
+    transition: background 0.4s;
+}
+.navbar ul li a:hover { 
+    position: relative;
+    color: #58B0D6;
+}
+
+.navbar ul li a:hover::after { 
+    background-color: white;
+}
+
+/*                 END                    */
+
+
+/* VIDEO BACKGROUND */
+
+
+.video-background { 
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+
+}
+
+/*MIDDLE TEXT */
+
+.content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    background-color: transparent;
+    font-size: 30px;
+    width: 100%; /* Add this line */
+    box-sizing: border-box; /* Add this line */
+}
+
+/* SEARCH BUTTON */
+
+.body { 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body { 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.box:hover input { 
+    width: 400px;
+}
+
+.box input{ 
+    width: 0;
+    outline: none;
+    border: none;
+    font: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.small-img { 
+    height: 100%;
+    width: 100px;
+
+}
